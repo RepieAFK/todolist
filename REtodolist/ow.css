@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #2575fc;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 10px rgba(37, 117, 252, 0.5);
+}
+
+button {
+    padding: 15px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #2575fc;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #6a11cb;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+li:hover {
+    transform: translateX(10px);
+    background: #e2e2e2;
+}
+
+li div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+li strong {
+    font-size: 18px;
+    color: #333;
+}
+
+li span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
